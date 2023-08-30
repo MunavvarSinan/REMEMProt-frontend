@@ -449,5 +449,159 @@
             "id": 45,
             "name": "SLC25A5"
         }
+    ],
+    "Disease":[
+        {
+            "id": 1,
+            "heading": "BT",
+            "disease": "Brain tumor"
+          },
+          {
+            "id": 2,
+            "heading": "BTC",
+            "disease": "Breast cancer"
+          },
+          {
+            "id": 3,
+            "heading": "SCLC",
+            "disease": "Squamous cell lung carcinoma"
+          },
+          {
+            "id": 4,
+            "heading": "C",
+            "disease": "Cancer"
+          },
+          {
+            "id": 5,
+            "heading": "OS",
+            "disease": "Osteosarcoma"
+          },
+          {
+            "id": 6,
+            "heading": "EC",
+            "disease": "Endometrial cancer"
+          },
+          {
+            "id": 7,
+            "heading": "MM",
+            "disease": "Multiple myeloma"
+          },
+          {
+            "id": 8,
+            "heading": "RCC",
+            "disease": "Renal cell carcinoma"
+          },
+          {
+            "id": 9,
+            "heading": "RB",
+            "disease": "Retinoblastoma"
+          },
+          {
+            "id": 10,
+            "heading": "HNSCC",
+            "disease": "Head and neck squamous cell carcinoma"
+          },
+          {
+            "id": 11,
+            "heading": "MCL",
+            "disease": "Mantle Cell Lymphoma"
+          },
+          {
+            "id": 12,
+            "heading": "AM",
+            "disease": "Astrocytoma"
+          },
+          {
+            "id": 13,
+            "heading": "POAG",
+            "disease": "Primary Open-Angle Glaucoma"
+          },
+          {
+            "id": 14,
+            "heading": "LC",
+            "disease": "Lung cancer"
+          },
+          {
+            "id": 15,
+            "heading": "D",
+            "disease": "Type 2 diabetes"
+          },
+          {
+            "id": 16,
+            "heading": "HP",
+            "disease": "Hepatotoxicity"
+          }
+    ],
+    "MPEM":[
+        {
+            "id": 1,
+            "heading": "UC",
+            "name": "Ultracentrifuge"
+          },
+          {
+            "id": 2,
+            "heading": "AT",
+            "name": "Aqueous two-phase system"
+          },
+          {
+            "id": 3,
+            "heading": "BT",
+            "name": "Biotynylation"
+          },
+          {
+            "id": 4,
+            "heading": "KB",
+            "name": "Kit-based"
+          },
+          {
+            "id": 5,
+            "heading": "UC and CSC",
+            "name": "Ultracentrifuge and Cell surface capture system"
+          },
+          {
+            "id": 6,
+            "heading": "SC",
+            "name": "Sucrose gradient centrifugation"
+          },
+          {
+            "id": 7,
+            "heading": "C",
+            "name": "Centrifugation"
+          }
+    ],
+    "organism":[
+        {
+            "id": 1,
+            "heading": "H",
+            "name": "Human"
+          },
+          {
+            "id": 2,
+            "heading": "M",
+            "name": "Mouse"
+          },
+          {
+            "id": 3,
+            "heading": "R",
+            "name": "Rat"
+          }
+    ],
+    "analysis":[
+        {
+            "id": 1,
+            "heading": "P",
+            "name": "Profile"
+          },
+          {
+            "id": 2,
+            "heading": "DEX",
+            "name": "Differential Expression"
+          },
+          {
+            "id": 3,
+            "heading": "BT",
+            "name": "Biotynylation"
+          }
     ]
+      
 }

@@ -22,6 +22,9 @@ interface ResultItem {
   geneSymbol: string;
   geneID: string;
   isTrans: string;
+  tissuetype: string;
+  cancertype: string;
+  cellname: string;
 }
 
 const BqueryResult = () => {
@@ -64,15 +67,99 @@ const BqueryResult = () => {
   }, [species, bqueryInput]);
 
   return (
-    <div>
-      {data &&
-        data.map((item, index) => (
-          <div key={index}>
+    <div className="flex justify-center">
+  <div className="w-11/12">
+    <div className="relative overflow-x-auto">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <>
+              <thead className="text-xs bg-gray-300 text-black ">
+                <tr className="text-center">
+                  <th
+                    className="py-3 border border-white"
+                    rowSpan={2}
+                    scope="col"
+                  >
+                    Gene symbol
+                  </th>
+                  <th
+                    className="py-3 border border-white"
+                    rowSpan={2}
+                    scope="col"
+                  >
+                    Transmembrane
+                  </th>
+                  <th
+                    className="py-3 border border-white"
+                    rowSpan={2}
+                    scope="col"
+                  >
+                    Profile and/or differential expression
+                  </th>
+                  <th
+                    className="py-3 border border-white"
+                    rowSpan={2}
+                    scope="col"
+                  >
+                    Context of identification
+                  </th>
+                  <th
+                    className="py-2 border border-white"
+                    colSpan={3}
+                    scope="colgroup"
+                  >
+                    Cell Marker Status
+                  </th>
+                </tr>
+                <tr className="text-center">
+                  <th className="py-2 border border-white" scope="col">
+                    Tissue type
+                  </th>
+                  <th className="py-2 border border-white" scope="col">
+                    Cancer type
+                  </th>
+                  <th className="py-2 border border-white" scope="col">
+                    Cell name
+                  </th>
+                </tr>
+              </thead>
+              {data &&
+                data.map((item, index) => (
+                  <tbody>
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        {item.geneSymbol}
+                      </th>
+                      <td className="px-6 py-4">{item.isTrans}</td>
+                      <td className="px-6 py-4">{item.profileOrDifex}</td>
+                      <td className="px-6 py-4">{item.contxtOfIdent}</td>
+                      
+                        <>
+                         <td className="px-6 py-4">{item.tissuetype}</td>
+                      <td className="px-6 py-4">{item.cancertype}</td>
+                      <td className="px-6 py-4">{item.cellname}</td>
+                        </>
+                      
+                    </tr>
+                  </tbody>
+                ))}
+            </>
+          </table>
+          <div className="flex justify-center mt-4">
+        <button className="px-4 py-2 mr-2 bg-blue-500 text-white rounded-md" >
+          Previous
+        </button>
+        <button className="px-4 py-2 bg-blue-500 text-white rounded-md" >
+          Next
+        </button>
+      </div>
+        </div>
 
-            {/* <pre>{JSON.stringify(item, null, 2)}</pre> */}
-            <pre>{item.contxtOfIdent}</pre>
-          </div>
-        ))}
+        {/* <pre>{JSON.stringify(item, null, 2)}</pre> */}
+        {/* <pre>{item.contxtOfIdent}</pre> */}
+      </div>
     </div>
   );
 };
